@@ -1,0 +1,404 @@
+_type: export
+__export_format: 4
+__export_date: 2023-01-08T11:44:36.171Z
+__export_source: insomnia.desktop.app:v2022.7.0
+resources:
+  - _id: req_44ea2f23e49d467f82f00342887ce1b0
+    parentId: fld_c20d1c3bddc54328b574a2a4f718b933
+    modified: 1673178012373
+    created: 1673177805702
+    url: http://localhost:4000/api/patho/facture/R10
+    name: fac
+    description: ""
+    method: GET
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1673177805702
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_c20d1c3bddc54328b574a2a4f718b933
+    parentId: wrk_ce5176e2db9649d49cdf970abe0541f2
+    modified: 1673172551980
+    created: 1673172468402
+    name: patho
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1673172522298
+    _type: request_group
+  - _id: wrk_ce5176e2db9649d49cdf970abe0541f2
+    parentId: null
+    modified: 1673172451355
+    created: 1673172451355
+    name: exam-9ar3ich.yaml
+    description: ""
+    scope: design
+    _type: workspace
+  - _id: req_cdda8bd7d10b4db4b7708724dd9508d0
+    parentId: fld_c20d1c3bddc54328b574a2a4f718b933
+    modified: 1673172635482
+    created: 1673172559468
+    url: http://localhost:4000/api/patho/add
+    name: add patho 1
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"code": "R10",
+        	"libelle": "Douleurs abdominales",
+        	"description": "A verifier"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1673172559468
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_e4e37f57d18a4f84b3c1fc04e27c3db1
+    parentId: fld_c20d1c3bddc54328b574a2a4f718b933
+    modified: 1673172654053
+    created: 1673172638295
+    url: http://localhost:4000/api/patho/add
+    name: add patho 2
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"code": "J20",
+        	"libelle": "Bronchite aigue",
+        	"description": "Appareil respiratoire"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1673136903207
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_9580dc87e40d40ef9af85cda315ac9f8
+    parentId: fld_130be4b9bded4590a0120f86bafb1f5b
+    modified: 1673173296719
+    created: 1673172799258
+    url: http://localhost:4000/api/patient/add-assign/R10
+    name: add pat 1
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"typePiece": "CIN",
+        	"idPiece": "09887755",
+        	"dateEmission": "2022-08-22",
+        	"nom": "Ahmed",
+        	"prenom": "Atiya"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1673172799258
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_130be4b9bded4590a0120f86bafb1f5b
+    parentId: wrk_ce5176e2db9649d49cdf970abe0541f2
+    modified: 1673172557766
+    created: 1673172512863
+    name: patients
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1673172522273
+    _type: request_group
+  - _id: req_90b077af027f4c20b53ed9ef8bfe430f
+    parentId: fld_130be4b9bded4590a0120f86bafb1f5b
+    modified: 1673173293966
+    created: 1673173153697
+    url: http://localhost:4000/api/patient/add-assign/J20
+    name: add pat 2
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"typePiece": "PASSEPORT",
+        	"idPiece": "W142516",
+        	"dateEmission": "2019-05-15",
+        	"nom": "Semia",
+        	"prenom": "Salem"
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1673172679363
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_2206b9d149e94a0e90dfb2424350048a
+    parentId: fld_2f06890af707453f8f3dc4c4a50a4859
+    modified: 1673173536667
+    created: 1673173313304
+    url: http://localhost:4000/api/fa/add
+    name: add fa 1
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"code": "R",
+        	"libelle": "Gastrologie",
+        	"description": "Appareil digestif",
+        	"actes": [{
+        		"code": "MCC200",
+        		"cotation": 9,
+        		"prixUnit": 10,
+        		"designation": "Echographie simple en mode A"
+        	}]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1673173313304
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_2f06890af707453f8f3dc4c4a50a4859
+    parentId: wrk_ce5176e2db9649d49cdf970abe0541f2
+    modified: 1673172518426
+    created: 1673172518426
+    name: fa
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1673172518426
+    _type: request_group
+  - _id: req_56d5c2d31eca4532bbc45604f3efce88
+    parentId: fld_2f06890af707453f8f3dc4c4a50a4859
+    modified: 1673173566010
+    created: 1673173393460
+    url: http://localhost:4000/api/fa/add
+    name: add fa 2
+    description: ""
+    method: POST
+    body:
+      mimeType: application/json
+      text: |-
+        {
+        	"code": "J",
+        	"libelle": "Pulmonologie",
+        	"description": "Appareil respiratoire",
+        	"actes": [{
+        		"code": "BKA020",
+        		"cotation": 4,
+        		"prixUnit": 20,
+        		"designation": "Prelevements mucus pour analyse"
+        	}]
+        }
+    parameters: []
+    headers:
+      - name: Content-Type
+        value: application/json
+    authentication: {}
+    metaSortKey: -1673173056281
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: req_db06a3117a8140e5831e191245bd6e85
+    parentId: fld_10388a43a44d4c1cac3a0b152cfee732
+    modified: 1673175467907
+    created: 1673175257435
+    url: http://localhost:4000/api/acte/assign/MCC200/J20
+    name: assign act 1
+    description: ""
+    method: PUT
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1673175257435
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: fld_10388a43a44d4c1cac3a0b152cfee732
+    parentId: wrk_ce5176e2db9649d49cdf970abe0541f2
+    modified: 1673176459641
+    created: 1673172522248
+    name: acte
+    description: ""
+    environment: {}
+    environmentPropertyOrder: null
+    metaSortKey: -1673172518376
+    _type: request_group
+  - _id: req_e5c5034ed2304dd6b24b06a37bc63f75
+    parentId: fld_10388a43a44d4c1cac3a0b152cfee732
+    modified: 1673175512340
+    created: 1673175348298
+    url: http://localhost:4000/api/acte/assign/BKA020/R10
+    name: assign act 2
+    description: ""
+    method: PUT
+    body: {}
+    parameters: []
+    headers: []
+    authentication: {}
+    metaSortKey: -1673174285369.5
+    isPrivate: false
+    settingStoreCookies: true
+    settingSendCookies: true
+    settingDisableRenderRequestBody: false
+    settingEncodeUrl: true
+    settingRebuildPath: true
+    settingFollowRedirects: global
+    _type: request
+  - _id: env_57f857068bc798f38165c28d5593de083bc6571c
+    parentId: wrk_ce5176e2db9649d49cdf970abe0541f2
+    modified: 1673172451366
+    created: 1673172451366
+    name: Base Environment
+    data: {}
+    dataPropertyOrder: null
+    color: null
+    isPrivate: false
+    metaSortKey: 1673172451366
+    _type: environment
+  - _id: jar_57f857068bc798f38165c28d5593de083bc6571c
+    parentId: wrk_ce5176e2db9649d49cdf970abe0541f2
+    modified: 1673172451371
+    created: 1673172451371
+    name: Default Jar
+    cookies: []
+    _type: cookie_jar
+  - _id: spc_7ace86d0d3684598aa78e578b81ff12f
+    parentId: wrk_ce5176e2db9649d49cdf970abe0541f2
+    modified: 1673172833804
+    created: 1673172451357
+    fileName: exam-ut.yaml
+    contents: ""
+    contentType: yaml
+    _type: api_spec
+  - _id: uts_436c70ea7ba348e290f691d57baf0058
+    parentId: wrk_ce5176e2db9649d49cdf970abe0541f2
+    modified: 1673172666785
+    created: 1673172666785
+    name: unit testing
+    _type: unit_test_suite
+  - _id: ut_1d790ba2b5c84a5a88e25b07b3666b3c
+    parentId: uts_436c70ea7ba348e290f691d57baf0058
+    modified: 1673172727306
+    created: 1673172670496
+    requestId: req_cdda8bd7d10b4db4b7708724dd9508d0
+    name: add pathos
+    code: >-
+      const response = await insomnia.send();
+
+      expect(response.status).to.equal(200);
+
+      const response1 = await insomnia.send('req_e4e37f57d18a4f84b3c1fc04e27c3db1');
+
+      expect(response1.status).to.equal(200);
+    _type: unit_test
+  - _id: ut_591919275cd34d178fb944cc289b11ec
+    parentId: uts_436c70ea7ba348e290f691d57baf0058
+    modified: 1673173193672
+    created: 1673173184611
+    requestId: req_9580dc87e40d40ef9af85cda315ac9f8
+    name: add patients
+    code: >-
+      const response1 = await insomnia.send();
+
+      expect(response1.status).to.equal(200);
+
+      const response2 = await insomnia.send('req_e4e37f57d18a4f84b3c1fc04e27c3db1');
+
+      expect(response2.status).to.equal(200);
+    _type: unit_test
+  - _id: ut_9e94aa9cbfd241c1ad30b4af0c0a3c42
+    parentId: uts_436c70ea7ba348e290f691d57baf0058
+    modified: 1673173751411
+    created: 1673173744076
+    requestId: req_2206b9d149e94a0e90dfb2424350048a
+    name: add fas
+    code: >-
+      const response1 = await insomnia.send();
+
+      expect(response1.status).to.equal(200);
+
+      const response2 = await insomnia.send('req_56d5c2d31eca4532bbc45604f3efce88');
+
+      expect(response2.status).to.equal(200);
+    _type: unit_test
+  - _id: ut_713b0c0efbbc48d0a2c3ebe0cbcd8418
+    parentId: uts_436c70ea7ba348e290f691d57baf0058
+    modified: 1673175386237
+    created: 1673175378673
+    requestId: req_db06a3117a8140e5831e191245bd6e85
+    name: assign act to path
+    code: >-
+      const response1 = await insomnia.send();
+
+      expect(response1.status).to.equal(200);
+
+      const response2 = await insomnia.send('req_e5c5034ed2304dd6b24b06a37bc63f75');
+
+      expect(response2.status).to.equal(200);
+    _type: unit_test
