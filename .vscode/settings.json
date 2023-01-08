@@ -1,0 +1,7 @@
+{
+    "editor.formatOnSave": true,
+    "[java]": {
+        "editor.defaultFormatter": "redhat.java"
+    },
+    "java.compile.nullAnalysis.mode": "automatic"
+}
