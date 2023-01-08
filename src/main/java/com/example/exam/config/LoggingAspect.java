@@ -1,6 +1,8 @@
 package com.example.exam.config;
 
+import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.After;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.springframework.stereotype.Component;
@@ -19,6 +21,11 @@ public class LoggingAspect {
         long elapsedTime = System.currentTimeMillis() - start;
         log.info("Method execution time: " + elapsedTime + " milliseconds.");
         return obj;
+    }
+
+    @After("execution(* com.example.exam.services.*.*(..)))")
+    public void logAfterMethod(JoinPoint jp) {
+        log.info("Method name: " + jp.getSignature().getName());
     }
 
 }
